@@ -6,7 +6,8 @@ const App = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/products');
+        //add live backend sevice here
+        const res = await fetch('https://ecommerce-clothing-backend.onrender.com/api/products');
         const data = await res.json();
         setProducts(data);
       } catch (error) {

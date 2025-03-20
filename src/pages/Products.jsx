@@ -9,7 +9,7 @@ const Products = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/products'); 
+        const res = await axios.get('https://ecommerce-clothing-backend.onrender.com/api/products'); 
         setProducts(res.data);
         setLoading(false);
       } catch (error) {
