@@ -1,0 +1,134 @@
+/* Product card container */
+.product-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover effect */
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Product image */
+.product-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+/* Image hover effect */
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Product title */
+.product-card h3 {
+  font-size: 20px;
+  margin: 15px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.product-card:hover h3 {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Product description */
+.product-card p {
+  font-size: 16px;
+  color: #555;
+  margin: 0 15px 15px;
+  line-height: 1.5;
+}
+
+/* Button or link */
+.product-card a {
+  display: inline-block;
+  background: #28a745;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 15px;
+  border-radius: 5px;
+  transition: background 0.3s;
+  text-align: center;
+}
+
+.product-card a:hover {
+  background: #218838;
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .product-card img {
+    height: 250px; /* Slightly smaller images */
+  }
+
+  .product-card h3 {
+    font-size: 18px;
+  }
+
+  .product-card p {
+    font-size: 15px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .product-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .product-card img {
+    height: 200px; 
+  }
+
+  .product-card h3 {
+    font-size: 16px;
+    margin: 10px;
+  }
+
+  .product-card p {
+    font-size: 14px;
+    margin: 10px;
+  }
+
+  .product-card a {
+    width: calc(100% - 30px); /* Full-width button */
+    text-align: center;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .product-card {
+    padding: 10px;
+  }
+
+  .product-card img {
+    height: 180px;
+  }
+
+  .product-card h3 {
+    font-size: 14px;
+  }
+
+  .product-card p {
+    font-size: 12px;
+  }
+
+  .product-card a {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}

@@ -1,0 +1,123 @@
+/* Sidebar container */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: #f4f4f4;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+  transition: all 0.3s ease;  /* Smooth transition */
+  z-index: 999;  /* Keep it above other content */
+}
+
+/* Sidebar heading */
+.sidebar h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Sidebar list */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Sidebar items */
+.sidebar li {
+  margin: 10px 0;
+}
+
+/* Sidebar links */
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  display: block;
+  padding: 12px 15px;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Hover effect */
+.sidebar a:hover {
+  background: #007bff;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* Toggle Button */
+.sidebar-toggle {
+  display: none;  /* Hidden by default on large screens */
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1000;  /* Above the sidebar */
+  transition: all 0.3s;
+}
+
+/* Sidebar animation */
+.sidebar.hidden {
+  transform: translateX(-100%);
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 220px;
+    padding: 15px;
+  }
+
+  .sidebar h3 {
+    font-size: 18px;
+  }
+
+  .sidebar a {
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+  }
+
+  .sidebar-toggle {
+    display: block;  /* Show the toggle button */
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%;
+  }
+
+  .sidebar a {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .sidebar-toggle {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}

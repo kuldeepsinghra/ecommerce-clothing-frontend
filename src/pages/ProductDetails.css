@@ -1,0 +1,40 @@
+.product-details {
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+    background: #f9f9f9;
+  }
+  
+  .product-details img {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .details h1 {
+    font-size: 32px;
+  }
+  
+  .details p {
+    font-size: 18px;
+  }
+  
+  .add-to-cart {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .add-to-cart:hover {
+    background: #0056b3;
+  }
+  
